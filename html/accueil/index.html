@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/Style-2.css">
+    <script src="https://kit.fontawesome.com/48e8df9806.js" crossorigin="anonymous"></script>
+    <link src="../script/script.js">
+    <title>Garage V.Parrot</title>
+</head>
+<body>
+    <header  id="home">
+        <div class="container">
+            <nav class="navbar fix-nav">
+                <div class="logo">
+                    <img src="../../assets/images/Capture_d_écran_2023-09-13_004554-removebg-preview.png" alt="logo principal" class="logo">
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#our-causes">Our Causes</a></li>
+                        <li><a href="activities.html">Recent Causes</a></li>
+                        <li><a href="#help-us">Help us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="menu-hamburger">
+                    <i class="fa-solid fa-bars" style="color: #D94350;"></i>
+                </div>
+            </nav>
+        </div>
+          <!-- Section Welcome -->
+      <div class="hero">
+        <section class="welcome">
+            <h1>Garage V.Parrot</h1>
+            <h2 class="slogan">Voir le danger, c'es voir plus loin</h2>
+            <div class="btn-donate">
+                <a href="#contact">
+                <button type="button"><span></span>Prendre un rendez-vous </button>
+                </a>
+
+            </div>
+        </section>
+    </div>
+    </header>
+    <main>
+        <section class="services-section">
+            <h2>Nos différents services</h2>
+            <div class="services grid-container">
+                <div class="service">
+                    <img src="https://picsum.photos/90/86" alt="Entretien du véhicule">
+                    <p>Entretien du véhicule</p>
+                </div>
+                <div class="service">
+                    <img src="https://picsum.photos/90/86" alt="Mécanique / Diagnostic">
+                    <p>Mécanique / Diagnostic</p>
+                </div>
+                <div class="service">
+                    <img src="https://picsum.photos/90/86" alt="Carrosserie">
+                    <p>Carrosserie</p>
+                </div>
+                <div class="service">
+                    <img src="https://picsum.photos/90/86" alt="Vitrage">
+                    <p>Vitrage</p>
+                </div>
+                <div class="service">
+                    <img src="https://picsum.photos/90/86" alt="Pneumatiques">
+                    <p>Pneumatiques</p>
+                </div>
+                <div class="service">
+                    <img src="https://picsum.photos/90/86" alt="Vente de véhicules d'occasion">
+                    <p>Vente de véhicules d'occasion</p>
+                </div>
+            </div>
+        </section>
+        <section class="used-cars-section">
+            <h2>Nos voitures d'occasion</h2>
+            <div class="cars flex-container">
+                <div class="car">
+                    <img src="https://picsum.photos/170/115" alt="Voiture d'occasion">
+                    <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression...</p>
+                </div>
+                <div class="car">
+                    <img src="https://picsum.photos/170/115" alt="Voiture d'occasion">
+                    <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression...</p>
+                </div>
+                <div class="car">
+                    <img src="https://picsum.photos/170/115" alt="Voiture d'occasion">
+                    <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression...</p>
+                </div>
+            </div>
+        </section>
+        <section class="contact-section">
+            <h2>Contactez-nous</h2>
+            <i class="fa-solid fa-phone"></i>
+            <!-- Placez ici votre formulaire de contact ou informations -->
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="overlap-group">
+            <div class="ellipse"></div>
+            <div class="visual-elements">            
+                <div class="rectangle"></div>
+                <div class="rectangle rectangle-2"></div>
+                <div class="rectangle rectangle-3"></div>
+          </div>
+          <p class="contact-info">
+            Retrouvez nous <br>11 rue de Alfred<br>75000 Paris<br><br>Contactez nous <br>01 96 69 96 69
+          </p>
+        </div>
+      </footer>
+    
+</body> 
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        const navItems = navLinks.querySelectorAll('a'); // Select all links inside nav-links
+    
+        menuHamburger.addEventListener('click',()=>{
+            navLinks.classList.toggle('mobile-menu');
+        })
+    
+        // For each link inside nav-links, we add an event listener
+        navItems.forEach((item) => {
+            item.addEventListener('click', () => {
+                // If mobile-menu class is active, we remove it
+                if(navLinks.classList.contains('mobile-menu')) {
+                    navLinks.classList.remove('mobile-menu');
+                }
+            });
+        });
+    </script>
+</html>

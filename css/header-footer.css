@@ -1,0 +1,134 @@
+import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #252526;
+    color: #F2F2F2;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar .logo img {
+    width: 150px;
+}
+
+.navbar .menu-hamburger {
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(41, 41, 41, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.5s ease-in-out;
+    z-index: 99;
+}
+
+.nav-links.mobile-menu {
+    left: 0;
+}
+
+.nav-links ul {
+    list-style: none;
+    text-align: center;
+}
+
+.nav-links ul li {
+    margin: 15px 0;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #F2F2F2;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 10px;
+    display: block;
+}
+
+.nav-links ul li a:hover {
+    color: #D94350;
+}
+
+/* Footer styles */
+.footer {
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlap-group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 414px;
+    background-color: #35343488;
+    padding: 15px;
+}
+
+.visual-elements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ellipse, .rectangle {
+    background-color: #d94350;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.ellipse {
+    width: 91px;
+    height: 91px;
+}
+
+.rectangle {
+    width: 27px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+.contact-info {
+    color: #f2f2f2;
+    font-size: 14px;
+    text-align: left;
+    margin-left: 20px;
+}

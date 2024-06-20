@@ -1,70 +1,320 @@
-/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/**/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    /* border: 1px solid red */
+}
+html, body {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px; 
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
+    color: #F2F2F2;
+    background-color: #252526;
+    font-size: 15px;
+    overflow-x: hidden;
 }
-header {
-  background-color: #ffffff;
-  padding: 20px;
-  text-align: center;
-  color: #000000;
+ul {
+    list-style: none;
+    text-decoration: none;    
 }
-nav {
-    display: none;
-    background-color: #ffffff;
-  padding: 20px;
-  text-align: center;
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-nav a {
-  color: #fff3f3;
-  text-decoration: none;
-  margin: 0 10px;
+
+
+/* -----------------------
+        Welcome  
+-----------------------*/
+.header_img {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../assets/images/mechano-dans-son-atelier.png);
+    background-position: 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    display: flex; /* Ajout */
+    flex-direction: column;
+    align-items: center; /* Ajout */
+    justify-content: flex-start; /* Ajout */
 }
-nav a:hover {
-  text-decoration: underline;
+
+.hero {
+    margin: auto;
+    width: 100%;
+    max-height: 100%; 
+
 }
-main {
-  padding: 20px;
-  text-align: center;
+
+.welcome {
+    padding: 35px 0;
+    width: 85%;
+    margin: auto;
+    max-width: 1200px;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    text-align: center;
+    gap: 40px;    
+    z-index: 1;
+    position: relative;
 }
-footer {
-  background-color: #b88f8f;
-  padding: 20px;
-  text-align: center;
-  color: #ffffff;
+
+h1 {
+    font-size: 40px;
 }
-/* Hamburger Menu Styles */
-.hamburger-menu {
-  display: block;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
+
+
+.welcome h2 {    
+    font-weight: 400;
+    font-size: 1.2rem;
 }
-.hamburger-menu span {
-  display: block;
-  width: 30px;
-  height: 5px;
-  background-color: #ffffff;
-  margin: 5px 0;
+
+.welcome .btn-donate {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
-.hamburger-menu span:nth-child(1) {
-  margin-top: 0;
+
+.welcome .btn-donate button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #D94350;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 2s;
 }
-.hamburger-menu span:nth-child(3) {
-  margin-bottom: 0;
+
+.welcome .btn-donate button span {
+    background: #D94350;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.6s;
 }
-.hamburger-menu:hover span {
-  background-color: #000000;
+
+.welcome .btn-donate button:hover span {
+    width: 100%;
 }
-@media (min-width: 768px) {
-  .hamburger-menu {
-    display: none;
-    color: green;
+
+.welcome .btn-donate button:hover {
+    border: none;
+}
+
+
+.banner-bottom-section .container,
+.what-we-do .container {
+    margin: 0 auto;
+}
+
+.banner-bottom-section {
+    background-color: #009688;
+    margin-top: 0;
+    text-align: center;
+    z-index: 0;
+}
+
+.banner-bottom-section .container h3 {
+    color: #fff;
+    padding: 60px 0 190px;
+    font-size: 38px;
+    margin: 0;
+}
+
+/* -----------------------
+    Nos différents services  
+-----------------------*/
+.services-section h2{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.services {
+    text-align: center;
+    width: 295px; 
+    margin: auto; 
   }
+  
+.services p {
+    font-size: 0.8em;
 }
-color
+  .services h3 {
+    margin-bottom: 20px; 
+}
+  
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 92px); 
+    grid-auto-rows: 134px; 
+    grid-gap: 45px 92px; 
+    justify-content: center; 
+    margin-bottom: 20px; 
+}
+
+
+.service {
+    width: 92px; 
+    height: 134px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(255, 79, 79, 0.400) ;
+}
+  
+.service img {
+    width: 91px; 
+    height: 91px; 
+    background-color: red; 
+    margin-bottom: 5px;
+    border-radius: 10px;
+    
+}
+  
+/* -----------------------
+    Nos voitures d'ocasion  
+-----------------------*/
+
+.used-cars-section h2{
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+
+}
+.used-cars-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.cars {
+    width: 90%;
+}
+.car {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px rgba(255, 79, 79, 0.400) ;
+    margin-bottom: 20px;
+}
+.car img {
+    border-radius: 10px;
+}
+.car p {
+    font-size: 0.7rem;
+    padding: 10px;
+    max-width: 250px;
+}
+
+/* -----------------------
+    Contactez-nous
+----------------------- */
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    animation: pulsate 2.5s infinite;
+}
+
+.contact-section h2 {
+    margin-right: 10px;
+}
+
+.contact-section i {
+    margin-left: 10px;
+}
+
+/* -----------------------
+    style de card
+----------------------- */
+.card-body {
+    border-radius: 25px; /* Ajout de bordure arrondie de 10px */
+    background-color: #555; /* Optionnel : pour voir le contraste avec le corps de la carte */
+}
+
+.card {
+    background-color: transparent;
+}
+
+.d-block {
+    border-radius: 10px;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 1.3rem;
+    height: 1rem;
+    background-size: 100%, 100%;
+    filter: invert(1); /* Inverser les couleurs pour des flèches blanches */
+    box-shadow: 0px 5px 5px rgba(221, 221, 221, 0.5);
+    border-radius: 10%; 
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(0); 
+    background: none;
+    border: none;
+    font-size: 2rem;
+}
+
+.card-text {
+    color: #fff;
+    font-size: 14px;
+}
+
+.btn {
+    width: 120px;
+}
+
+.btn-light {
+    background-color: #e0e0e0;
+    color: #000;
+    border: none;
+    font-size: 14px;
+    padding: 10px 0;
+}
+
+.btn-light:hover {
+    background-color: #d0d0d0;
+}

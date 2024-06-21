@@ -13,6 +13,8 @@ html, body {
     scroll-padding-top: 50px; 
 }
 
+
+
 body {
     color: #F2F2F2;
     background-color: #252526;
@@ -307,6 +309,17 @@ h1 {
     width: 120px;
 }
 
+.btn-contact {
+    width: 80%;
+    max-width: 270px; 
+}
+
+@media (max-width: 180px) {
+    .btn-contact {
+        width: auto;
+    }
+}
+
 .btn-light {
     background-color: #e0e0e0;
     color: #000;
@@ -317,4 +330,55 @@ h1 {
 
 .btn-light:hover {
     background-color: #d0d0d0;
+}
+
+.custom-spacing-card {
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+/* -----------------------
+        Card Fonts  
+-----------------------*/
+
+body {
+    font-size: 16px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+}
+
+.card-text {
+    font-size: 0.8rem;
+}
+
+/* Tablet font sizes */
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+
+    .card-title {
+        font-size: 1.75rem;
+    }
+
+    .card-text {
+        font-size: 1.125rem;
+    }
+}
+
+/* Desktop font sizes */
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+    }
+
+    .card-title {
+        font-size: 2rem;
+    }
+
+    .card-text {
+        font-size: 1.25rem;
+    }
 }

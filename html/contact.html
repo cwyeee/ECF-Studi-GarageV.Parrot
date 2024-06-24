@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/header-footer.css">
+    <link rel="stylesheet" href="../../css/Style.css">
+    <script src="https://kit.fontawesome.com/48e8df9806.js" crossorigin="anonymous"></script>
+    <script src="../script/script.js"></script>
+    <title>Garage V.Parrot</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar fix-nav">
+                <div class="logo">
+                    <img src="../../assets/images/Capture_d_écran_2023-09-13_004554-removebg-preview.png" alt="logo principal" class="logo">
+                </div>
+                <div class="menu-hamburger">
+                    <i class="fa-solid fa-bars" style="color: #D94350;"></i>
+                </div>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="ocasions.html">Ocasions</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="form-container mt-5 shadow-lg">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="nom">Nom</label>
+                                <input type="text" class="form-control" id="nom" placeholder="NOM">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="prenom">Prénom</label>
+                                <input type="text" class="form-control" id="prenom" placeholder="PRENOM">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="votre_mail@mail.com">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="telephone">Téléphone</label>
+                                <input type="text" class="form-control" id="telephone" placeholder="Téléphone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="objet">Objet du message</label>
+                            <input type="text" class="form-control" id="objet" placeholder="OBJET DU MESSAGE">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Décrivez ici en quelques lignes votre demande</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Décrivez ici en quelques lignes votre demande"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-custom btn-block">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Planning des horaires d'ouverture -->
+<div class="info-container shadow-lg mt-3">
+    <h3 class="text-center">Horaires d'ouverture</h3>
+    <p class="text-center">Ouvert 7j/7 de 7h00 à 21h00</p>
+    <p class="text-center">Contactez-nous par téléphone : 01 96 69 96 69</p>
+</div>
+
+    <footer class="footer">
+        <div class="overlap-group">
+            <div class="ellipse"></div>
+            <div class="visual-elements">            
+                <div class="rectangle"></div>
+                <div class="rectangle rectangle-2"></div>
+                <div class="rectangle rectangle-3"></div>
+            </div>
+            <p class="contact-info">
+                Retrouvez nous <br>11 rue de Alfred<br>75000 Paris<br><br>Contactez nous <br>01 96 69 96 69
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/48e8df9806.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/usm/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        const navItems = navLinks.querySelectorAll('a'); 
+    
+        menuHamburger.addEventListener('click',()=>{
+            navLinks.classList.toggle('mobile-menu');
+        })
+    
+        navItems.forEach((item) => {
+            item.addEventListener('click', () => {
+                if(navLinks.classList.contains('mobile-menu')) {
+                    navLinks.classList.remove('mobile-menu');
+                }
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

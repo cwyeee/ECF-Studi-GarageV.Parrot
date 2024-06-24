@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    /* border: 1px solid red */
+   
 }
 html, body {
     scroll-behavior: smooth;
@@ -44,10 +44,10 @@ ul {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: local;
-    display: flex; /* Ajout */
+    display: flex;
     flex-direction: column;
-    align-items: center; /* Ajout */
-    justify-content: flex-start; /* Ajout */
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .hero {
@@ -149,55 +149,60 @@ h1 {
 /* -----------------------
     Nos différents services  
 -----------------------*/
-.services-section h2{
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+@media (min-width: 390px) {
+    .col-custom-6 {
+        width: 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
 }
 
-.services {
-    text-align: center;
-    width: 295px; 
-    margin: auto; 
-  }
-  
-.services p {
-    font-size: 0.8em;
-}
-  .services h3 {
-    margin-bottom: 20px; 
-}
-  
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 92px); 
-    grid-auto-rows: 134px; 
-    grid-gap: 45px 92px; 
-    justify-content: center; 
-    margin-bottom: 20px; 
+@media (min-width: 1024px) {
+    .col-lg-4 {
+        width: 33.3333%;
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
 }
 
+.service-card .card {
+    border: none;
+    border-radius: 18px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
 
-.service {
-    width: 92px; 
-    height: 134px; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: flex-start;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px rgba(255, 79, 79, 0.400) ;
+.service-card .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
-  
-.service img {
-    width: 91px; 
-    height: 91px; 
-    background-color: red; 
-    margin-bottom: 5px;
-    border-radius: 10px;
-    
+.card-img-top{
+    border-radius: 15px 15px 0 0;
+    max-height: 150px;
+    object-fit: cover;
+
 }
-  
+
+.service-card .card-body {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%
+}
+
+.service-card .card-title {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
 /* -----------------------
     Nos voitures d'ocasion  
 -----------------------*/
@@ -269,8 +274,11 @@ h1 {
     style de card
 ----------------------- */
 .card-body {
-    border-radius: 25px; /* Ajout de bordure arrondie de 10px */
-    background-color: #555; /* Optionnel : pour voir le contraste avec le corps de la carte */
+    border-radius: 0 0 25px 25px;
+    background-color: #555;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card {
@@ -287,7 +295,7 @@ h1 {
     width: 1.3rem;
     height: 1rem;
     background-size: 100%, 100%;
-    filter: invert(1); /* Inverser les couleurs pour des flèches blanches */
+    filter: invert(1);
     box-shadow: 0px 5px 5px rgba(221, 221, 221, 0.5);
     border-radius: 10%; 
 }
@@ -303,6 +311,7 @@ h1 {
 .card-text {
     color: #fff;
     font-size: 14px;
+    flex-grow: 1;
 }
 
 .btn {
@@ -381,4 +390,32 @@ body {
     .card-text {
         font-size: 1.25rem;
     }
+}
+
+/* -----------------------
+        Forms  
+-----------------------*/
+
+.form-container {
+    background-color: #555;
+    padding: 20px;
+    border-radius: 25px;
+    color: #fff;
+}
+.btn-custom {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    display: block;
+    margin: 20px auto;
+}
+.form-container label {
+    color: #fff;
+}
+.form-container input, .form-container textarea {
+    background-color: #333;
+    border: none;
+    color: #fff;
 }
